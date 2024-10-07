@@ -10,19 +10,19 @@ This project automates monster creation application using Playwright framework, 
 
 ## Setup
 1. Clone or download the repository
-    open a new terminal and move to the application's folder `cd monstersCreationTests`
-    Run `npm install` to install dependencies.
-    Run `npm start` to execute the application.
-    Open the url `http://localhost:3000/` and verify the application works correctly in the browser.
+- open a new terminal and move to the application's folder `cd monstersCreationTests`
+- Run `npm install` to install dependencies.
+- Run `npm start` to execute the application.
+- Open the url `http://localhost:3000/` and verify the application works correctly in the browser.
 
 2. open a new terminal and move to e2e folder
-    `cd e2e`
-    install playwright with the following commands
+- `cd e2e`
+- install playwright with the following commands
 
 3. Install Playwright
-    `npm init -y`
-    `npm i -D playwright @playwright/test`
-    `npx playwright install`
+- `npm init -y`
+- `npm i -D playwright @playwright/test`
+- `npx playwright install`
 
 ## Test execution
 `npx playwright test`
