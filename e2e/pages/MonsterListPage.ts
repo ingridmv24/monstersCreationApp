@@ -29,4 +29,24 @@ export class MonsterListPage{
                                 .getByRole("button", {name: "Delete"}).click();
     }
 
+    async markMonsterAsFavorite(monsterName){
+
+        const monsterCard = await this.listMonsters.filter({ hasText: monsterName });
+
+        //Select the favorite button inside the filtered monster card.
+        const favoriteButton = monsterCard.getByTestId("favorite-btn");
+        await favoriteButton.click();
+    }
+
+    async isFavoriteMarked(monsterName){
+        const monsterCard = await this.listMonsters.filter({ hasText: monsterName });
+        const favoriteButton = monsterCard.getByTestId("favorite-btn");
+        const color = await favoriteButton.getAttribute('style');
+
+        if(color != null && color.includes('color: red;')){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }
